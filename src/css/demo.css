@@ -1,0 +1,247 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.calendar{
+    width: 350px;
+    height:490px;
+    padding: 12px 10px 10px 12px;
+    background-color:  rgba(0, 0 , 0, 0.7);
+}
+.calendar .header{
+    height:100px;
+    width: 100%;
+
+}
+.calendar .header h1{
+    margin: 0px;
+    padding: 0px;
+    font-size: 40px;
+    color: white;
+}
+.calendar .header span{
+    display: block;
+    padding-top: 5px; 
+    color:rgb(67, 134, 187);
+    font-size: 18px;
+}
+
+.calendar .header span:hover{
+    cursor: pointer;
+    color: wheat;
+}
+
+hr{
+    margin: 0;
+    padding: 0;
+}
+
+.calendar .center{
+    /* position: relative; */
+    height: 20px;
+    /* box-sizing: border-box; */
+    width: 100%;
+    padding: 20px 0 0 0;
+}
+.calendar .center>div:first-child span{
+    color:rgb(222,222,222);
+}
+
+.calendar .center>div:first-child span:hover{
+    cursor: pointer;
+    color:white;
+}
+
+
+.calendar .center div:first-child{
+    position: relative;
+    padding: 0 5px;
+
+}
+
+.calendar .center div:first-child .arrow{
+    position: absolute;
+    right:15px;
+    display: inline-block;
+}
+
+.calendar .center .arrow span:first-child{
+    margin-right: 28px;
+}
+
+
+#canvas, .canvas-animate{
+    position: absolute;
+    z-index: 1;
+}
+.date-detail{
+    position: absolute;
+    z-index: 2;
+    width: 350px;
+    height: 300px;
+    overflow: hidden;
+  
+}
+
+
+
+.outAnimate{
+    transform:scale(0);
+}
+
+
+
+
+.date-choose{
+    position: absolute;
+    margin-top:16px;
+    z-index: 3;
+    width: 350px;
+    height: 340px;
+    overflow: hidden;
+    transform: scale(0);
+}
+
+
+.date-choose .content{
+    position: absolute;
+    top:-340px;
+    /* width: 350px; */ 
+}
+
+.date-choose .content .line{
+    height: 85px;
+    padding: 0px 0px;
+    margin: 0px 0px; 
+}
+
+.date-choose .content .line li{
+    position: relative;
+    display: inline-block;
+    width: 85px;
+    height:100%;
+    text-align: center;
+    
+}
+.date-choose .content .line li div{
+    position: absolute;/*或fixed*/
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    width: 82px;
+    height: 82px;
+    margin:auto;
+    /* color:white; */
+}
+
+.date-choose .content .line li span{
+    line-height: 85px;
+    
+
+}
+
+.date-choose .content .line li div:hover{
+    /* outline: 1px solid rgb(222, 222, 222); */
+}
+
+
+.date-detail .content{
+    position: absolute;
+    top:-300px;
+    width: 350px;
+    /* transition: top 0.5s; */
+}
+.month-info{
+    height:350px;
+
+}
+.line-header,.date-detail .line{
+    height: 50px;
+    /* width: 100%; */
+    padding: 0px 0px;
+    margin: 0px 0px; 
+}
+.line-header .row, .line .row{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin: 1px 1px;
+    text-align: center;
+    /* line-height: 100%; */
+}
+
+.line-header .row span{
+    display: inline-block;
+    line-height: 48px;
+    font-size: 14px;
+    color:rgb(231, 231, 231);
+}
+
+.date-detail .line .row div{
+    display: inline-block;
+    margin-top: 10%;
+}
+
+.date-detail .line .row span:first-child{
+    display: block;
+    font-size: 14px;
+    /* color:rgb(231, 231, 231); */
+}
+
+.date-detail .line .row span:last-child{
+    /* line-height: 48px; */        
+    display: block;
+    font-size: 12px;
+    /* color:rgb(231, 231, 231); */
+}
+
+.curDay, .curMonth, .curYear{
+    background-color: rgb(0, 120, 215);
+    color:rgb(231, 231, 231);
+}
+.lastMonthday, .nextMonthday, .nextMonth, .nextYear{
+    color:rgb(144, 144, 144);
+
+}
+
+.curMonthday,.curYearMonth, .curYearInterval{
+    /* background-color: rgba(95, 95, 95); */
+    color:rgb(231, 231, 231);
+}
+.show{
+    display: block;
+}
+
+
+
+.hidden{
+    display: none;
+}
+
+
+.inOrOutAnimate{
+    transform: scale(1);
+    transition: transform 0.4s;
+}
+
+
+
+.inAnimate{
+    /* transform: scale(1); */
+    transition: transform 0.3s;
+}
+
+.restoreConfiguAnimate{
+    transform: scale(1);
+}
+
+.outAnimate{
+    transform: scale(1.2);
+}
+
+
+/* .warp:hover{
+    transform: scale(0.2);
+   
+} */
