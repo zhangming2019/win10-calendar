@@ -19,7 +19,6 @@ import "./css/icon_font/iconfont.css"
         "month": Symbol("month"),
         "day": Symbol("day")
     }
-
     let realYear = undefined;
     let realMonth = undefined;
     let realDay = undefined;
